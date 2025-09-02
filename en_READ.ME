@@ -1,0 +1,57 @@
+Non-Existent URL Checker
+
+Test if a web page exists or not.
+
+⚠️ For educational purposes only • Developed by M!ss s3c
+
+📝 Guide: Creating and Running Your Script to Check Websites
+
+1. Create the script file
+
+In the terminal, create the file:
+
+nano script9.1.py
+
+2. Add the Python code
+
+Paste the following code:
+
+#!/usr/bin/python3
+# Website Existence Checker in Python
+# Usage: python3 script9.1.py
+
+import requests
+
+# Test with a URL (you can use a non-existent one)
+site = requests.get("http://example.com")
+status = site.status_code
+
+if status == 200:
+    print("Page exists")
+else:
+    print("Page does not exist")
+
+
+⚠️ Note: For educational purposes, you can test with non-existent URLs safely.
+
+3. Run the script
+python3 script9.1.py
+
+4. Example output
+
+Existing URL:
+
+Page exists
+
+
+Non-existent URL:
+
+Page does not exist
+
+👉 What you learned here
+
+requests.get() → sends an HTTP request to the website.
+
+.status_code → returns the HTTP status code (200 → OK, 404 → Not Found, etc.).
+
+if statement → checks conditions and executes different actions based on the result.
